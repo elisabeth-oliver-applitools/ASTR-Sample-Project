@@ -31,3 +31,8 @@ Among these recomended files are:
 - sitemap.xml : contains a list of urls for a "crawl" action to explore.
     - See "Supported Actions" - "Iterative Actions" - "Crawl a sitemap.xml file" for more information on how to call a crawl action. 
     - See "sitemap.xml" in this project for an example of a valid sitemap.xml file. 
+
+
+Run this ASTR project from the command line with the command: 
+
+    java  -jar ApplitoolsSimpleTestRunner-3.58.1.jar job.xml
