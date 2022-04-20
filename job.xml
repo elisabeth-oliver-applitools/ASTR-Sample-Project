@@ -1,20 +1,26 @@
 <job ufgConcurrency="5">
+	<!-- Load the reusable runner and browser configurations and any reusable Action Blocks -->
 	<load>definitions.xml</load>
 	<load>configurations.xml</load>
+	<!-- Open a new Applitools batch -->
 	<batch name="Optiv ASTR">
+		<!-- Add as many tests as desired -->
 		<test appname="optiv.com" testname="https://www.optiv.com/">
+			<!-- select one of the runner/browser configurations we specified in configurations.xml -->
 			<configurations names="grid" />
+			<!-- List the desired actions the test should preform -->
 			<execute>
 				<action type="navigate">https://www.optiv.com/</action>
 				<action type="sleep">2500</action>
 				<action type="check" target = "region" by="css" selector="#onetrust-banner-sdk" fullPage="false" useDom="true"/> 
-				<removeCookies/>
+				<removeCookies/> <!-- <- A reusable Action Block, check out definitions.xml for how it was set up-->
 				<action type="check" target = "window" fullPage="true"/>
 			</execute>
 		</test>
 		<test appname="optiv.com" testname="crawl">
 			<configurations names="grid" />
 			<execute>
+				<!-- Crawl the list of provided site's pulled from sitemap.xml -->
                 <action type="crawl" from="sitemap.xml file" path="sitemap.xml" createSeparateTests="true" > 
                     <foreach>
                         <action type="navigate">exp[%url%]</action>
@@ -29,6 +35,7 @@
 			<execute>
 				<action type="navigate">https://www.optiv.com/</action>
 				<removeCookies/>
+				<!-- Iterate over the buttons of your top Navigation Bar to check each menu -->
 				<action type="iterateElements" tag="button">
 					<withinContainer by="css" selector="#main-menu-2-group" implicit_wait = "5"/>
 					<foreach>
