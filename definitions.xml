@@ -1,0 +1,9 @@
+<definitions>
+    <removeCookies>
+        <!-- <action type="implicitWait" by="css" selector="#onetrust-consent-sdk" implicit_wait="10"/> -->
+        <action type="sleep">2500</action>
+        <action type="executejs">
+            document.querySelectorAll('#onetrust-consent-sdk')[0].remove();
+        </action>
+    </removeCookies>
+</definitions>

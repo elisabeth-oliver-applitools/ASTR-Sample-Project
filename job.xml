@@ -1,0 +1,42 @@
+<job ufgConcurrency="5">
+	<load>definitions.xml</load>
+	<load>configurations.xml</load>
+	<batch name="Optiv ASTR">
+		<test appname="optiv.com" testname="https://www.optiv.com/">
+			<configurations names="grid" />
+			<execute>
+				<action type="navigate">https://www.optiv.com/</action>
+				<action type="sleep">2500</action>
+				<action type="check" target = "region" by="css" selector="#onetrust-banner-sdk" fullPage="false" useDom="true"/> 
+				<removeCookies/>
+				<action type="check" target = "window" fullPage="true"/>
+			</execute>
+		</test>
+		<test appname="optiv.com" testname="crawl">
+			<configurations names="grid" />
+			<execute>
+                <action type="crawl" from="sitemap.xml file" path="sitemap.xml" createSeparateTests="true" > 
+                    <foreach>
+                        <action type="navigate">exp[%url%]</action>
+						<removeCookies/>
+						<action type="check" target = "window" fullPage="true" useDom="true"/>
+                    </foreach>
+                </action>  
+			</execute>
+		</test>
+		<test appname="optiv.com" testname="main nav tabs">
+			<configurations names="grid" />
+			<execute>
+				<action type="navigate">https://www.optiv.com/</action>
+				<removeCookies/>
+				<action type="iterateElements" tag="button">
+					<withinContainer by="css" selector="#main-menu-2-group" implicit_wait = "5"/>
+					<foreach>
+						<action type="click"/>
+						<action type="check" target = "window" fullPage="true" useDom="true"/>
+					</foreach>
+				</action>
+			</execute>
+		</test>
+	</batch>
+</job>
