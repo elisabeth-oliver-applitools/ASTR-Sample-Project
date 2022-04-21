@@ -7,13 +7,13 @@
 		<applitools>applitoolsConf.xml</applitools>
 		<driver useChromeOptions="headless">chrome</driver>
 		<!-- <driver>chrome</driver> -->
-		<viewport width = "1000" height = "600" ></viewport>
+		<viewport width = "1500" height = "800" ></viewport>
 		<visualGrid>
 			
-			<browser type="CHROME" width="1300" height="1000" />
-			<browser type="CHROME" width="690" height="500" />
+			<browser type="CHROME" width="1500" height="1000" />
+			<browser type="CHROME" width="1300" height="800" />
 
- 			<browser type="firefox" width="1300" height="600" />
+ 			<browser type="firefox" width="1300" height="800" />
 			<!-- <browser type="firefox" width="1100" height="600" />
 			<browser type="firefox" width="980" height="600" />
 			<browser type="firefox" width="690" height="600" />
