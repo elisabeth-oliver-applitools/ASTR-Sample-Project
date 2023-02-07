@@ -32,7 +32,8 @@ Among these recomended files are:
     - See "Supported Actions" - "Iterative Actions" - "Crawl a sitemap.xml file" for more information on how to call a crawl action. 
     - See "sitemap.xml" in this project for an example of a valid sitemap.xml file. 
 
-
-Run this ASTR project from the command line with the command: 
+To run this ASTR project:
+First download the latest version of ASTR (version 4.0.2 at time of writing) from the documentation linked above and place it in the same directory as the rest of the files found in this repository. 
+Then from the command line run this project with: 
 
     java  -jar ApplitoolsSimpleTestRunner-4.0.2.jar job.xml
