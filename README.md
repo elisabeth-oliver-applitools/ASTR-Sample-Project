@@ -35,4 +35,4 @@ Among these recomended files are:
 
 Run this ASTR project from the command line with the command: 
 
-    java  -jar ApplitoolsSimpleTestRunner-3.58.1.jar job.xml
+    java  -jar ApplitoolsSimpleTestRunner-4.0.2.jar job.xml
