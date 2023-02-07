@@ -31,7 +31,7 @@ Among these recomended files are:
 - sitemap.xml : contains a list of urls for a "crawl" action to explore.
     - See "Supported Actions" - "Iterative Actions" - "Crawl a sitemap.xml file" for more information on how to call a crawl action. 
     - See "sitemap.xml" in this project for an example of a valid sitemap.xml file. 
-
+---
 To run this ASTR project:
 First download the latest version of ASTR (version 4.0.2 at time of writing) from the documentation linked above and place it in the same directory as the rest of the files found in this repository. 
 Then from the command line run this project with: 
